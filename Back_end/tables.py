@@ -1,0 +1,2 @@
+# Dados do solo
+dados_Solo = [['Areia', 1, 1.4], ['Areia Siltosa', 0.8, 2], ['Areia Siltoargilosa', 0.7, 2.4], ['Areia Argilosa', 0.6, 3], ['Areia Argilosiltosa', 0.5, 2.8], ['Silte', 0.4, 3], ['Silte Arenoso', 0.55, 2.2], ['Silte Arenoargiloso', 0.45, 2.8], ['Silte Argiloso', 0.23, 3.4], ['Silte Argiloarenoso', 0.25, 3], ['Argila', 0.2, 6], ['Argila Arenosa', 0.35, 2.4], ['Argila Arenossiltosa', 0.3, 2.8], ['Argila Siltosa', 0.22, 4], ['Argila Siltoarenosa', 0.33, 3]]
