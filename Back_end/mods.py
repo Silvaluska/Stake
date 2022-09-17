@@ -10,20 +10,18 @@ def titulo(nome):
     print('-='*20)
 
 
+def menu_item(nome, item):
+    print(f'{nome:39}{item}')
+
+
 def menu():
     titulo('STAKE PROGRAM')
-    spt = 'SPT'
-    print(f'{spt:39}1')
-    d = 'DIÂMETRO DA ESCATA'
-    print(f'{d:39}2')
-    s = 'SOLOS'
-    print(f'{s:39}3')
-    t = 'ESTACA'
-    print(f'{t:39}4')
-    c = 'CALCULO'
-    print(f'{c:39}5')
-    f = 'FECHAR PROGRAMA'
-    print(f'{f:39}6')
+    menu_item('SPT', 1)
+    menu_item('DIÂMETRO DA ESTACA', 2)
+    menu_item('SOLOS', 3)
+    menu_item('ESTACA', 4)
+    menu_item('CALCULO', 5)
+    menu_item('FECHAR PROGRAMA', 6)
     print('-='*20)
     r = input('Escolha uma opção: ')
     return r
