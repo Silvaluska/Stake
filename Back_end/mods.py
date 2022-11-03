@@ -5,13 +5,13 @@ from pickle import GLOBAL
 
 
 def titulo(nome):
-    print('-='*20)
-    print(f'{nome:^40}')
-    print('-='*20)
+    print('+','-'*40,'+', sep='')
+    print('|',f'{nome:^40}','|', sep='')
+    print('+','-'*40,'+', sep='')
 
 
 def menu_item(nome, item):
-    print(f'{nome:39}{item}')
+    print('|',f'{nome:39}{item}','|', sep='')
 
 
 def menu():
@@ -22,7 +22,7 @@ def menu():
     menu_item('ESTACA', 4)
     menu_item('CALCULO', 5)
     menu_item('FECHAR PROGRAMA', 6)
-    print('-='*20)
+    print('+','-'*40,'+', sep='')
     r = input('Escolha uma opção: ')
     return r
 
@@ -56,7 +56,7 @@ def solos():
     titulo('Lista com tipos de solo')
     n = 0
     for i in tables.dados_Solo:
-        print(f'{i[0]:30}{n}')
+        print('|',f'{i[0]:38}{n:>2}','|',sep='')
         n += 1
     titulo('Dados do solo')
     global solo
@@ -71,9 +71,9 @@ def tipo():
     estacas = [['Franki', 2.5, 5], ['Metálica', 1.75, 3.5], ['Pré-moldada', 1+d/(0.8*100), 2*(1+d/(0.8*100))], ['Escavada', 3, 6], ['Raiz, Helíce Continua e Ômega', 2, 4]]
     n = 0
     for i in estacas:
-        print(f'{i[0]:39}{n}')
+        print('|',f'{i[0]:39}{n}','|',sep='')
         n += 1
-    print('-='*20)
+    print('+','-'*40,'+',sep='')
     global tipo_estaca
     tipo_estaca = estacas[int(input('Qual estaca você deseja usar? '))]
     return tipo_estaca
