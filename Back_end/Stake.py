@@ -1,8 +1,29 @@
+from cgitb import text
+from turtle import onrelease
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
 import mods
 import os
 from time import sleep
 
-while True:
+class teste(App):
+    def build(self):
+        box = BoxLayout(orientation='vertical')
+        botao = Button(text='Botão!!', font_size=30, on_release=self.incrementar)
+        self.label = Label(text='0', font_size=30)
+        box.add_widget(botao)
+        box.add_widget(self.label)
+        return box
+    
+    def incrementar(self, botao):
+        novo_label =int(self.label.text) + 1 
+        self.label.text = str(novo_label)
+
+teste().run()
+
+'''while True:
     r = mods.menu()
     if r == '1':
         mods.spt()
@@ -22,4 +43,4 @@ while True:
         break
     else:
         r = input('Escolha uma opção: ')
-    sleep(2)
+    sleep(2)'''
